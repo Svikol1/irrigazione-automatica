@@ -22,11 +22,11 @@ basic.forever(function () {
     umidita_terreno = Environment.ReadSoilHumidity(AnalogPin.P1)
     livello_acqua = Environment.ReadWaterLevel(AnalogPin.P2)
     if (umidita_terreno <= 70) {
-        for (let index = 0; index < 4; index++) {
+        for (let index = 0; index < 1; index++) {
             pins.servoWritePin(AnalogPin.P9, 180)
-            basic.pause(500)
+            basic.pause(5000)
             pins.servoWritePin(AnalogPin.P9, 0)
-            basic.pause(500)
+            basic.pause(2000)
         }
     } else {
         pins.servoWritePin(AnalogPin.P9, 0)
